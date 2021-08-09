@@ -20,15 +20,11 @@ public class Address {
     @GeneratedValue
     private long id;
     @NotNull
-    @Size(min=3, max=30)
     private String street;
     @NotNull
-    @Size(min=3, max=30)
     private String city;
     @NotNull
-    @Size(min=3, max=30)
     private String state;
     @NotNull
-    @Size(min=3, max=30)
     private String zip;
 }

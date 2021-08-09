@@ -3,6 +3,7 @@ package ars.cs.miu.edu.models;
 import lombok.*;
 
 import javax.persistence.*;
+import javax.validation.constraints.Future;
 import javax.validation.constraints.FutureOrPresent;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Positive;
@@ -22,13 +23,13 @@ public class Flight {
     @GeneratedValue
     private long id;
     @NotBlank(message = "Flight number is mandatory")
-    @Size(min=2, max=15)
+    @Size(min=20, max=20)
     private int flightNumber;
     @Positive
     private int capacity;
-    @FutureOrPresent
+    @Future
     private LocalDate departureTime;
-    @FutureOrPresent
+    @Future
     private LocalDate arrivalTime;
 
     @ManyToOne(cascade = CascadeType.ALL)

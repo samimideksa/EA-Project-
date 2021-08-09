@@ -24,7 +24,6 @@ public class Airport {
     @NotNull
     @Size(min=3, max=3)
     private String code;
-    @NotBlank(message = "Name is mandatory")
     @Size(min=2, max=60)
     private String name;
     @OneToOne

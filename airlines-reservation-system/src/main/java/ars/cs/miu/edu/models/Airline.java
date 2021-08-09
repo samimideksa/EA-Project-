@@ -23,10 +23,8 @@ public class Airline {
     @Size(min=2, max=2)
     private String code;
     @NotNull
-    @Size(min=2, max=25)
     private String name;
     @Column(table = "History")
-    @Size(min=2, max=10000)
-    @NotBlank
+    @Size(min=2, max=2000)
     private String history;
 }
