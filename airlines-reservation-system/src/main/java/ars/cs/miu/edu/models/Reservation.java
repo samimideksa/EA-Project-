@@ -3,6 +3,9 @@ package ars.cs.miu.edu.models;
 import lombok.*;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
 import java.util.List;
 
 @Getter
@@ -17,8 +20,14 @@ public class Reservation {
     @Id
     @GeneratedValue
     private long id;
+    @NotNull
+    @Size(min=6, max=6)
     private String reservationCode;
+    @NotNull
+    @Size(min=2, max=30)
     private String departure;
+    @NotNull
+    @Size(min=2, max=30)
     private String destination;
     @OneToMany(cascade = CascadeType.ALL)
     private List<Ticket> tickets;
